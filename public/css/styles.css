@@ -1,0 +1,177 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none; }
+
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.CodeMirror {
+  background: none;
+  color: white;
+  /**/
+  /**/
+  /**/
+  /**/
+  /**/
+  /**/
+  /**/
+  /*?*/
+  /*?*/
+  /*?*/
+  /**/
+  /*?*/
+  /**/ }
+  .CodeMirror .CodeMirror-line::selection,
+  .CodeMirror .CodeMirror-line > span::selection,
+  .CodeMirror .CodeMirror-line > span > span::selection {
+    background: #d7d4f0; }
+  .CodeMirror .CodeMirror-gutters {
+    background: none;
+    border: 0; }
+  .CodeMirror .CodeMirror-linenumber {
+    color: #343434; }
+  .CodeMirror .CodeMirror-cursor {
+    border-left-color: white !important; }
+  .CodeMirror .cm-keyword {
+    color: #f9ee98; }
+  .CodeMirror .cm-atom {
+    color: #FC0; }
+  .CodeMirror .cm-number {
+    color: #ca7841; }
+  .CodeMirror .cm-def {
+    color: #8DA6CE; }
+  .CodeMirror span.cm-variable-2, .CodeMirror span.cm-tag {
+    color: #607392; }
+  .CodeMirror span.cm-variable-3, .CodeMirror span.cm-def {
+    color: #607392; }
+  .CodeMirror .cm-operator {
+    color: #cda869; }
+  .CodeMirror .cm-comment {
+    color: #777;
+    font-style: italic;
+    font-weight: normal; }
+  .CodeMirror .cm-string {
+    color: #8f9d6a;
+    font-style: italic; }
+  .CodeMirror .cm-string-2 {
+    color: #bd6b18; }
+  .CodeMirror .cm-meta {
+    background-color: #141414;
+    color: #f7f7f7; }
+  .CodeMirror .cm-builtin {
+    color: #cda869; }
+  .CodeMirror .cm-tag {
+    color: #997643; }
+  .CodeMirror .cm-attribute {
+    color: #d6bb6d; }
+  .CodeMirror .cm-header {
+    color: #FF6400; }
+  .CodeMirror .cm-hr {
+    color: #AEAEAE; }
+  .CodeMirror .cm-link {
+    color: #ad9361;
+    font-style: italic;
+    text-decoration: none; }
+  .CodeMirror .cm-error {
+    border-bottom: 1px solid red; }
+
+body {
+  font-family: 'Lato', sans-serif; }
+
+.header {
+  color: white;
+  position: relative;
+  height: 69px;
+  min-height: 69px;
+  padding: 10px 15px;
+  border-bottom: 5px solid #343436;
+  box-shadow: 0 1px 1px black;
+  background: black;
+  z-index: 11; }
+  .header h1 {
+    font-size: 1.3rem;
+    margin: 0 0 4px 0; }
+
+.editor {
+  display: flex;
+  flex-shrink: 0;
+  height: 350px;
+  overflow: hidden; }
+
+.panel {
+  height: 100%;
+  width: calc((100% - 22px*3) / 3);
+  overflow: hidden; }
+
+.panel-heading {
+  background: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  white-space: nowrap;
+  position: relative;
+  overflow: hidden;
+  padding: 5px; }
+  .panel-heading h2 {
+    font-weight: bold;
+    margin: 0;
+    font-size: 1.3em;
+    display: inline-block;
+    padding-left: 2px;
+    vertical-align: middle; }
+
+.resizer {
+  position: relative;
+  z-index: 2;
+  background: #343436; }
+  .resizer:first-child {
+    cursor: auto; }
+
+.horizontal-resizer {
+  position: relative;
+  z-index: 3;
+  height: 20px;
+  width: 100%;
+  border-bottom: 1px solid black;
+  box-shadow: 0 0 1px black;
+  cursor: row-resize; }
+
+.vertical-resizer {
+  width: 20px;
+  height: 100%;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  border-right: 1px solid rgba(0, 0, 0, 0.4);
+  cursor: col-resize; }
+
+#editor {
+  background: #1d1f20;
+  color: #ccc; }

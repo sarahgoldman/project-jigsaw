@@ -1,0 +1,35 @@
+<div class="workspace" ng-controller="WorkspaceController" >
+    <form class="editor" id="editor">
+        <div class="vertical-resizer resizer" resizer resizer-after="#htmlPanel"></div>
+        <div class="panel html-panel" id="htmlPanel">
+            <div class="panel-heading">
+                <h2>HTML</h2>
+            </div>
+            <div class="code-wrap">
+                <textarea id="html" class="code-box" ng-model="editor.html"></textarea>
+            </div>
+        </div>
+        <div class="vertical-resizer resizer" resizer resizer-before="#htmlPanel" resizer-after="#cssPanel" resizer-direction="vertical"></div>
+        <div class="panel css-panel" id="cssPanel">
+            <div class="panel-heading">
+                <h2>CSS</h2>
+            </div>
+            <div class="code-wrap">
+                <textarea id="css" class="code-box" ng-model="editor.css"></textarea>
+            </div>
+        </div>
+        <div class="vertical-resizer resizer" resizer resizer-before="#cssPanel" resizer-after="#jsPanel" resizer-direction="vertical"></div>
+        <div class="panel js-panel" id="jsPanel">
+            <div class="panel-heading">
+                <h2>JS</h2>
+            </div>
+            <div class="code-wrap">
+                <textarea id="js" class="code-box" ng-model="editor.js"></textarea>
+            </div>
+        </div>
+    </form>
+    <div class="horizontal-resizer resizer" resizer resizer-before="#editor" resizer-direction="horizontal"></div>
+    <div class="preview" id="output">
+        <iframe src="http://localhost:3000/output"/>
+    </div>
+</div>

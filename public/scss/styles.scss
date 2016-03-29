@@ -1,0 +1,92 @@
+
+@import "reset";
+@import "codemirror";
+
+$dark-gray: #1d1f20;
+$med-gray: #343436;
+$light-gray: #ccc;
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.header {
+    color: white;
+    position: relative;
+    height: 69px;
+    min-height: 69px;
+    padding: 10px 15px;
+    border-bottom: 5px solid $med-gray;
+    box-shadow: 0 1px 1px black;
+    background: black;
+    z-index: 11;
+
+    h1 {
+        font-size: 1.3rem;
+        margin: 0 0 4px 0;
+    }
+}
+
+.editor {
+    display: flex;
+    flex-shrink: 0;
+    height: 350px;
+    overflow: hidden;
+}
+
+.panel {
+    height: 100%;
+    width: calc((100% - 22px*3) / 3);
+    overflow: hidden;
+}
+
+.panel-heading {
+    background: rgba(0,0,0,0.1);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    white-space: nowrap;
+    position: relative;
+    overflow: hidden;
+    padding: 5px;
+
+    h2 {
+        font-weight: bold;
+        margin: 0;
+        font-size: 1.3em;
+        display: inline-block;
+        padding-left: 2px;
+        vertical-align: middle;
+    }
+}
+
+.resizer {
+    position: relative;
+    z-index: 2;
+    background: $med-gray;
+
+    &:first-child {
+        cursor: auto;
+    }
+}
+
+.horizontal-resizer {
+    position: relative;
+    z-index: 3;
+    height: 20px;
+    width: 100%;
+    border-bottom: 1px solid black;
+    box-shadow: 0 0 1px black;
+    cursor: row-resize;
+}
+
+.vertical-resizer {
+    width: 20px;
+    height: 100%;
+    border-left: 1px solid rgba(255,255,255,0.1);
+    border-right: 1px solid rgba(0,0,0,0.4);
+    cursor: col-resize;
+}
+
+#editor {
+    background: $dark-gray;
+    color: $light-gray;
+}
